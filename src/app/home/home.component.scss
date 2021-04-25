@@ -1,0 +1,8 @@
+.nav-pills .nav-item a {
+  color: var(--text-color);
+
+  &.active {
+    background-color: var(--titleColor);
+    color: #fff;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="form-container">
+  <form [formGroup]="newWalletForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="walletName">Wallet name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="walletName"
+        formControlName="walletName"
+      />
+    </div>
+    <button type="submit" class="btn btn-add">Add</button>
+  </form>
+</div>

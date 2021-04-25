@@ -1,0 +1,51 @@
+<div class="container-table">
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Balance</th>
+        <th scope="col">
+          <span class="d-md-none">Count of trans.</span>
+          <span class="d-none d-md-table-cell"
+            >Count of transactions</span
+          >
+        </th>
+        <th scope="col">
+          <span class="d-md-none">Trans. total</span>
+          <span class="d-none d-md-table-cell">Transactions total</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let wallet of wallets">
+        <tr>
+          <td>
+            <label [for]="wallet.id">
+              <i class="fas fa-chevron-down"></i>
+            </label>
+          </td>
+          <td>{{ wallet.id }}</td>
+          <td>{{ wallet.name }}</td>
+          <td>{{ wallet.balance }}</td>
+          <td>{{ wallet.transactions.length }}</td>
+          <td>{{ wallet.transcationsTotal }}</td>
+        </tr>
+        <tr>
+          <input [id]="wallet.id" type="checkbox" />
+          <td class="colaps" colspan="6">
+            <ul *ngIf="wallet.transactions.length">
+              <li *ngFor="let transaction of wallet.transactions">
+                {{transaction.amount}} - {{transaction.reference }}
+              </li>
+            </ul>
+            <div *ngIf="!wallet.transactions.length">
+              No data to display.
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

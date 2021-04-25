@@ -1,0 +1,72 @@
+<main>
+  <div class="container">
+    <div class="col-12 py-5">
+      <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-wallets-tab"
+            data-toggle="pill"
+            href="#pills-wallets"
+            role="tab"
+            aria-controls="pills-wallets"
+            aria-selected="true"
+            >Wallets</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-create-wallet-tab"
+            data-toggle="pill"
+            href="#pills-create-wallet"
+            role="tab"
+            aria-controls="pills-create-wallet"
+            aria-selected="false"
+            >Create wallet</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-create-transaction-tab"
+            data-toggle="pill"
+            href="#pills-create-transaction"
+            role="tab"
+            aria-controls="pills-create-transaction"
+            aria-selected="false"
+          >
+            <span class="d-md-none">Create trans.</span>
+            <span class="d-none d-md-flex">Create transaction</span>
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-wallets"
+          role="tabpanel"
+          aria-labelledby="pills-wallets-tab"
+        >
+          <app-table></app-table>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-create-wallet"
+          role="tabpanel"
+          aria-labelledby="pills-create-wallet-tab"
+        >
+          <app-new-wallet></app-new-wallet>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-create-transaction"
+          role="tabpanel"
+          aria-labelledby="pills-create-transaction-tab"
+        >
+          <app-new-transaction></app-new-transaction>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

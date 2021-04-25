@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --titleColor: #0a2540;
+  --textColor: #425466;
+  --backgorundColor: #f6f9fc;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--textColor);
+  /* background-color: var(--backgorundColor); */
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+
+  form {
+    width: 100%;
+    max-width: 570px;
+    padding: 15px;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+  }
+}
+
+.btn-add {
+  background-color: var(--titleColor);
+  color: #fff;
+  &:hover {
+    background-color: var(--textColor);
+    color: #fff;
+  }
+}
